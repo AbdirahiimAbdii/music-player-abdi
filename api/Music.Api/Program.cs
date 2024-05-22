@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,9 +33,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Register endpoints
-app.MapGroup("api/v1/albums").MapAlbumsEndpoints();
-app.MapGroup("api/v1/artists").MapArtistsEndpoints();
-app.MapGroup("api/v1/images").MapImagesEndpoints();
-app.MapGroup("api/v1/tracks").MapTracksEndpoints();
+app.MapGroup("api/v1/albums").WithTags("Albums").MapAlbumsEndpoints();
+app.MapGroup("api/v1/artists").WithTags("Artists").MapArtistsEndpoints();
+app.MapGroup("api/v1/images").WithTags("Images").MapImagesEndpoints();
+app.MapGroup("api/v1/tracks").WithTags("Tracks").MapTracksEndpoints();
 
 app.Run();
