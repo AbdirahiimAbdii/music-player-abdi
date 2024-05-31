@@ -26,7 +26,7 @@ The database file should be included in the repo.
 
 ## REST tests in PostMan
 - Set up a "test database" (a variant of the database that you know the exact contents of), so you know exactly what data to test against. (This database may get "broken"/affected during the tests. So make sure there is a copy of what it should look like BEFORE the tests are run, that you can recreate it from.)
-- In the test database there must be at least 5 artists, at least 15 albums and at least 120 tracks/albums. All albums must be linked to an existing artist. All spr must be linked to an existing album.
+- In the test database there must be at least 5 artists, at least 15 albums and at least 120 tracks/albums. All albums must be linked to an existing artist. All tracks must be linked to an existing album.
 - Test with PostMan that all REST routes work (ie the 5 usual per table that should exist - GET that returns all data from a table, GET that returns a row based on id, POST that creates a row in a table, PUT that changes a row in the table, DELETE which removes a row in the table ).
 - Test that responses are returned with the code 200 and that it takes a maximum of 500 ms to get a response.
 - Test that the answers have correct content.

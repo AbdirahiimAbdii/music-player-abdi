@@ -1,0 +1,70 @@
+$small-screen-size: 768px;
+$sidebar-width: 250px;
+
+.app {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  .sidebar {
+    width: $sidebar-width;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    background: var(--bg-color-light);
+
+    @media (max-width: $small-screen-size) {
+      & { display: none; }
+    }
+  }
+
+  & > main {
+    width: 100%;
+    padding: 40px;
+    margin-left: $sidebar-width;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    box-sizing: border-box;
+
+    & > .content {
+      overflow-y: auto;
+    }
+
+    & > .toolbar {
+      position: fixed;
+      z-index: 9999;
+      bottom: 10px;
+      left: 20px;
+      right: 20px;
+
+      height: 42px;
+
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+
+      & > .toolbar-button {
+        width: 60px;
+        height: 60px;
+      }
+
+      @media (min-width: $small-screen-size) {
+        & { display: none; }
+      }
+    }
+
+    @media (max-width: $small-screen-size) {
+      & {
+        padding: 20px 20px 0 20px;
+        margin-bottom: 62px;
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace Music.Api.Features.Tracks;
+
+public class UpdateTrackRequest
+{
+    [Required(ErrorMessage = "Title is required")]
+    public string Title { get; set; }
+    
+    [Range(0, int.MaxValue, ErrorMessage = "Duration must be non negative")]
+    public int Duration { get; set; }
+}

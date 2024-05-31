@@ -1,0 +1,8 @@
+.artist-header {
+  display: flex;
+  gap: 20px;
+
+  & > .description {
+    & > h1 { color: var(--accent-color) }
+  }
+}

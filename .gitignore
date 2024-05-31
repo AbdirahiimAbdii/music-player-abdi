@@ -399,4 +399,3 @@ FodyWeavers.xsd
 .DS_Store
 api/Music.Api/app.db-shm
 api/Music.Api/app.db-wal
-.DS_Store

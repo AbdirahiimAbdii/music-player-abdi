@@ -1,0 +1,10 @@
+.slider {
+  overflow-x: auto;
+
+  & > .slider-container {
+    gap: 10px;
+    display: flex;
+    // width: 100%;
+    // overflow: hidden;
+  }
+}
